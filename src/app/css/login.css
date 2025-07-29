@@ -1,0 +1,59 @@
+.input {
+  border: 2px solid #000;
+}
+
+.input::placeholder {
+  color: gray;
+}
+
+.label {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .form {
+    background-color: var(--periwinkle-20);
+  }
+
+  .input {
+    color: black;
+    background-color: var(--periwinkle-90);
+  }
+
+  .submit {
+    background-color: var(--periwinkle-10);
+    color: var(--babypowder);
+  }
+
+  .signup {
+    color: var(--babypowder);
+  }
+
+  .label {
+    color: var(--babypowder);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .form {
+    background-color: var(--cream);
+  }
+
+  .input {
+    color: var(--grey-30);
+    background-color: var(--cream-90);
+  }
+
+  .submit {
+    background-color: var(--electricblue);
+    color: var(--grey-30);
+  }
+
+  .signup {
+    color: var(--grey-30);
+  }
+
+  .label {
+    color: var(--grey-30);
+  }
+}

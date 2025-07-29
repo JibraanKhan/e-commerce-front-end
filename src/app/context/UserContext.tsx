@@ -4,10 +4,12 @@ import { createContext, useContext, useState } from "react";
 import { User } from "./Interfaces/User";
 import { UserContextType } from "./Interfaces/UserContextType";
 import axios, { AxiosResponse, AxiosError } from "axios";
+import Header from "../components/Header";
+
 const userContext = createContext<UserContextType>({
   user: null,
   setUser: () => {},
-  register: () => {},
+  signup: () => {},
   login: () => {},
   logout: () => {},
 });
@@ -42,7 +44,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const logout = () => {};
 
-  const register = (
+  const signup = (
     username: string,
     password: string,
     firstName: string,
@@ -73,7 +75,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <userContext.Provider value={{ user, setUser, register, login, logout }}>
+    <userContext.Provider value={{ user, setUser, signup, login, logout }}>
       {children}
     </userContext.Provider>
   );

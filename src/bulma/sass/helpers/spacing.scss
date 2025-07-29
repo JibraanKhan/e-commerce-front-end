@@ -1,0 +1,79 @@
+@use "../utilities/initial-variables" as iv;
+
+.#{iv.$class-prefix}marginless {
+  margin: 0 !important;
+}
+
+.#{iv.$class-prefix}paddingless {
+  padding: 0 !important;
+}
+
+$spacing-shortcuts: (
+  "margin": "m",
+  "padding": "p",
+) !default;
+$spacing-directions: (
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l",
+) !default;
+$spacing-horizontal: "x" !default;
+$spacing-vertical: "y" !default;
+$spacing-values: (
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 0.75rem,
+  "4": 1rem,
+  "5": 1.5rem,
+  "6": 3rem,
+  "7": 4rem,
+  "8": 7rem,
+  "9": 9rem,
+  "10": 12rem,
+  "11": 15rem,
+  "12": 21rem,
+  "13": 26rem,
+  "14": 31rem,
+  "15": 37rem,
+  "16": 40rem,
+  "17": 44rem,
+  "18": 48rem,
+  "19": 52rem,
+  "20": 56rem,
+  "21": 60rem,
+  "auto": auto,
+) !default;
+
+@each $property, $shortcut in $spacing-shortcuts {
+  @each $name, $value in $spacing-values {
+    // All directions
+    .#{iv.$class-prefix}#{$shortcut}-#{$name} {
+      #{$property}: $value !important;
+    }
+
+    // Cardinal directions
+    @each $direction, $suffix in $spacing-directions {
+      .#{iv.$class-prefix}#{$shortcut}#{$suffix}-#{$name} {
+        #{$property}-#{$direction}: $value !important;
+      }
+    }
+
+    // Horizontal axis
+    @if $spacing-horizontal != null {
+      .#{iv.$class-prefix}#{$shortcut}#{$spacing-horizontal}-#{$name} {
+        #{$property}-left: $value !important;
+        #{$property}-right: $value !important;
+      }
+    }
+
+    // Vertical axis
+    @if $spacing-vertical != null {
+      .#{iv.$class-prefix}#{$shortcut}#{$spacing-vertical}-#{$name} {
+        #{$property}-top: $value !important;
+        #{$property}-bottom: $value !important;
+      }
+    }
+  }
+}

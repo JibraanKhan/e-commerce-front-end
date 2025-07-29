@@ -1,13 +1,128 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: hsl(249, 100%, 90%);
+  --foreground: hsl(249, 100%, 20%);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --black: black;
+  --white: white;
+
+  /* greys */
+  --grey-10: hsl(0, 0, 11%);
+  --grey-20: hsl(0, 0, 21%);
+  --grey-30: hsl(0, 0, 31%);
+  --grey-40: hsl(0, 0, 41%);
+  --grey-50: hsl(0, 0, 51%);
+  --grey-60: hsl(0, 0, 61%);
+  --grey-70: hsl(0, 0, 71%);
+  --grey-80: hsl(0, 0, 81%);
+  --grey-90: hsl(0, 0, 91%);
+
+  /* babypowder */
+  --babypowder: hsl(60, 100%, 99%);
+  --babypowder-10: hsl(60, 100%, 10%);
+  --babypowder-20: hsl(60, 100%, 20%);
+  --babypowder-30: hsl(60, 100%, 30%);
+  --babypowder-40: hsl(60, 100%, 40%);
+  --babypowder-50: hsl(60, 100%, 50%);
+  --babypowder-60: hsl(60, 100%, 60%);
+  --babypowder-70: hsl(60, 100%, 70%);
+  --babypowder-80: hsl(60, 100%, 80%);
+  --babypowder-90: hsl(60, 100%, 90%);
+
+  /* mauve */
+  --mauve: hsl(300, 100%, 89%);
+  --mauve-10: hsl(300, 100%, 10%);
+  --mauve-20: hsl(300, 100%, 20%);
+  --mauve-30: hsl(300, 100%, 30%);
+  --mauve-40: hsl(300, 100%, 40%);
+  --mauve-50: hsl(300, 100%, 50%);
+  --mauve-60: hsl(300, 100%, 60%);
+  --mauve-70: hsl(300, 100%, 70%);
+  --mauve-80: hsl(300, 100%, 80%);
+  --mauve-90: hsl(300, 100%, 90%);
+
+  /* periwinkle */
+  --periwinkle: hsl(249, 100%, 85%);
+  --periwinkle-10: hsl(249, 100%, 10%);
+  --periwinkle-20: hsl(249, 100%, 20%);
+  --periwinkle-30: hsl(249, 100%, 30%);
+  --periwinkle-40: hsl(249, 100%, 40%);
+  --periwinkle-50: hsl(249, 100%, 50%);
+  --periwinkle-60: hsl(249, 100%, 60%);
+  --periwinkle-70: hsl(249, 100%, 70%);
+  --periwinkle-80: hsl(249, 100%, 80%);
+  --periwinkle-90: hsl(249, 100%, 90%);
+
+  /* jordyblue */
+  --jordyblue: hsl(217, 100%, 81%);
+  --jordyblue-10: hsl(217, 100%, 10%);
+  --jordyblue-20: hsl(217, 100%, 20%);
+  --jordyblue-30: hsl(217, 100%, 30%);
+  --jordyblue-40: hsl(217, 100%, 40%);
+  --jordyblue-50: hsl(217, 100%, 50%);
+  --jordyblue-60: hsl(217, 100%, 60%);
+  --jordyblue-70: hsl(217, 100%, 70%);
+  --jordyblue-80: hsl(217, 100%, 80%);
+  --jordyblue-90: hsl(217, 100%, 90%);
+
+  /* electricblue */
+  --electricblue: hsl(185, 100%, 80%);
+  --electricblue-10: hsl(185, 100%, 10%);
+  --electricblue-20: hsl(185, 100%, 20%);
+  --electricblue-30: hsl(185, 100%, 30%);
+  --electricblue-40: hsl(185, 100%, 40%);
+  --electricblue-50: hsl(185, 100%, 50%);
+  --electricblue-60: hsl(185, 100%, 60%);
+  --electricblue-70: hsl(185, 100%, 70%);
+  --electricblue-80: hsl(185, 100%, 80%);
+  --electricblue-90: hsl(185, 100%, 90%);
+
+  /* teagreen */
+  --teagreen: hsl(110, 100%, 87%);
+  --teagreen-10: hsl(110, 100%, 10%);
+  --teagreen-20: hsl(110, 100%, 20%);
+  --teagreen-30: hsl(110, 100%, 30%);
+  --teagreen-40: hsl(110, 100%, 40%);
+  --teagreen-50: hsl(110, 100%, 50%);
+  --teagreen-60: hsl(110, 100%, 60%);
+  --teagreen-70: hsl(110, 100%, 70%);
+  --teagreen-80: hsl(110, 100%, 80%);
+  --teagreen-90: hsl(110, 100%, 90%);
+
+  /* cream */
+  --cream: hsl(62, 100%, 86%);
+  --cream-10: hsl(62, 100%, 10%);
+  --cream-20: hsl(62, 100%, 20%);
+  --cream-30: hsl(62, 100%, 30%);
+  --cream-40: hsl(62, 100%, 40%);
+  --cream-50: hsl(62, 100%, 50%);
+  --cream-60: hsl(62, 100%, 60%);
+  --cream-70: hsl(62, 100%, 70%);
+  --cream-80: hsl(62, 100%, 80%);
+  --cream-90: hsl(62, 100%, 90%);
+
+  /* sunset */
+  --sunset: hsl(33, 100%, 82%);
+  --sunset-10: hsl(33, 100%, 10%);
+  --sunset-20: hsl(33, 100%, 20%);
+  --sunset-30: hsl(33, 100%, 30%);
+  --sunset-40: hsl(33, 100%, 40%);
+  --sunset-50: hsl(33, 100%, 50%);
+  --sunset-60: hsl(33, 100%, 60%);
+  --sunset-70: hsl(33, 100%, 70%);
+  --sunset-80: hsl(33, 100%, 80%);
+  --sunset-90: hsl(33, 100%, 90%);
+
+  /* melon */
+  --melon: hsl(0, 100%, 84%);
+  --melon-10: hsl(0, 100%, 10%);
+  --melon-20: hsl(0, 100%, 20%);
+  --melon-30: hsl(0, 100%, 30%);
+  --melon-40: hsl(0, 100%, 40%);
+  --melon-50: hsl(0, 100%, 50%);
+  --melon-60: hsl(0, 100%, 60%);
+  --melon-70: hsl(0, 100%, 70%);
+  --melon-80: hsl(0, 100%, 80%);
+  --melon-90: hsl(0, 100%, 90%);
 }
 
 html,
@@ -17,8 +132,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,9 +147,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */

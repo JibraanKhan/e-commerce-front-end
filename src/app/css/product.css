@@ -1,0 +1,24 @@
+@media (prefers-color-scheme: dark) {
+  .cell {
+    background-color: var(--periwinkle-10);
+  }
+
+  .title,
+  .subtitle {
+    color: var(--babypowder);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .cell {
+    background-color: var(--melon);
+    /* color: white; */
+  }
+
+  .card-content > .title {
+    color: var(--babypowder);
+  }
+  .card-content > .subtitle {
+    color: var(--grey-30);
+  }
+}
